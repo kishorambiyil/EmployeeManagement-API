@@ -30,10 +30,10 @@ jobs:
         run: dotnet restore ./EmployeeManagement/EmployeeManagement.csproj
 
       - name: Build API
-        run: dotnet build ./EmployeeManagement/EmployeeManagement.csproj --configuration Release --no-restore
+        run: dotnet build ./EmployeeManagement/EmployeeManagement.API.csproj --configuration Release --no-restore
 
       - name: Publish API
-        run: dotnet publish ./EmployeeManagement/EmployeeManagement.csproj --configuration Release --no-build --output "${{ env.DOTNET_ROOT }}/myapp"
+        run: dotnet publish ./EmployeeManagement/EmployeeManagement.API.csproj --configuration Release --no-build --output "${{ env.DOTNET_ROOT }}/myapp"
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v4
