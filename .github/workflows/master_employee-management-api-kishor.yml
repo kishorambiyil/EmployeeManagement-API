@@ -27,7 +27,7 @@ jobs:
           dotnet-version: '10.x'
 
       - name: Restore dependencies
-        run: dotnet restore ./EmployeeManagement/EmployeeManagement.csproj
+        run: dotnet restore ./EmployeeManagement/EmployeeManagement.API.csproj
 
       - name: Build API
         run: dotnet build ./EmployeeManagement/EmployeeManagement.API.csproj --configuration Release --no-restore
